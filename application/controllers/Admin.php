@@ -33,27 +33,58 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/footer.php');
 	}
 
-	public function actualizarEstadoArea()
+	public function componentes()
 	{
-		$idarea = $this->input->post('idarea');
-		$state = $this->input->post('state');
-		$this->load->model('Areas');
-		$this->Areas->actualizarEstado($idarea, $state);
+		$this->load->view('admin/header.php');
+		$this->load->model('Componentes');
+		$data['componentes'] = $this->Componentes->obtenerComponentes();
+		$this->load->view('admin/componentes.php', $data);
+		$this->load->view('admin/footer.php');
 	}
 
-	public function actualizarDescArea()
+	public function competencias()
 	{
-		$idarea = $this->input->post('idarea');
-		$desc = $this->input->post('desc');
-		$this->load->model('Areas');
-		$this->Areas->actualizarDesc($idarea, $desc);
+		$this->load->view('admin/header.php');
+		$this->load->model('Competencias');
+		$data['competencias'] = $this->Competencias->obtenerCompetencias();
+		$this->load->view('admin/competencias.php', $data);
+		$this->load->view('admin/footer.php');
 	}
 
-	public function agregarArea()
+	public function formatos()
 	{
-		$desc = $this->input->post('desc');
-		$this->load->model('Areas');
-		$this->Areas->agregarArea($desc);
+		$this->load->view('admin/header.php');
+		$this->load->model('Formatos');
+		$data['formatos'] = $this->Formatos->obtenerFormatos();
+		$this->load->view('admin/formatos.php', $data);
+		$this->load->view('admin/footer.php');
+	}
+
+	public function grados()
+	{
+		$this->load->view('admin/header.php');
+		$this->load->model('Grados');
+		$data['grados'] = $this->Grados->obtenerGrados();
+		$this->load->view('admin/grados.php', $data);
+		$this->load->view('admin/footer.php');
+	}
+
+	public function idiomas()
+	{
+		$this->load->view('admin/header.php');
+		$this->load->model('Idiomas');
+		$data['idiomas'] = $this->Idiomas->obtenerIdiomas();
+		$this->load->view('admin/idiomas.php', $data);
+		$this->load->view('admin/footer.php');
+	}
+
+	public function licencias()
+	{
+		$this->load->view('admin/header.php');
+		$this->load->model('Licencias');
+		$data['licencias'] = $this->Licencias->obtenerLicencias();
+		$this->load->view('admin/licencias.php', $data);
+		$this->load->view('admin/footer.php');
 	}
 
 }

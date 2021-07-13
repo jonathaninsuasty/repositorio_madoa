@@ -13,4 +13,14 @@ class Formatos extends CI_Model {
 		$this->db->query("UPDATE formatos SET state=".$state." WHERE idformato=".$idformato);
 	}
 
+	function actualizarDesc($idformato, $desc)
+    {
+    	$this->db->query("UPDATE idformatos SET descformato='".$desc."' WHERE idformato=".$idformato);
+    }
+
+    function agregarFormato($desc)
+    {
+    	$this->db->query("INSERT INTO formatos(descformato, state) VALUES('".$desc."', 1)");
+    }
+
 }

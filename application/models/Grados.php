@@ -13,6 +13,11 @@ class Grados extends CI_Model {
 		$this->db->query("UPDATE grados SET state=".$state." WHERE idgrado=".$idgrado);
 	}
 
+	function actualizarDesc($idgrado, $desc)
+    {
+    	$this->db->query("UPDATE grados SET descgrado='".$desc."' WHERE idgrado=".$idgrado);
+    }
+
 
 	function agregarGrado($desc)
 	{

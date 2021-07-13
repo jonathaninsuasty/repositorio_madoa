@@ -41,7 +41,7 @@ function activar_desactivar(idarea) {
 
 	$.ajax({
   		method: "POST",
-  		url: $('#url').val() + 'admin/actualizarEstadoArea',
+  		url: $('#url').val() + 'area/actualizarEstadoArea',
   		data: { idarea : idarea, state : state }
 	}).done(function( msg ) {
     	swal("Buen trabajo!", "El área cambió de estado.", "success");
@@ -55,7 +55,7 @@ function actualizarDesc(idarea) {
   		if (value != null) {
   			$.ajax({
 		  		method: "POST",
-		  		url: $('#url').val() + 'admin/actualizarDescArea',
+		  		url: $('#url').val() + 'area/actualizarDescArea',
 		  		data: { idarea : idarea, desc : value}
 			}).done(function( msg ) {
 		    	swal({
@@ -77,7 +77,7 @@ function agregar() {
   		if (value != null) {
   			$.ajax({
 		  		method: "POST",
-		  		url: $('#url').val() + 'admin/agregarArea',
+		  		url: $('#url').val() + 'area/agregarArea',
 		  		data: { desc : value}
 			}).done(function( msg ) {
 		    	swal({

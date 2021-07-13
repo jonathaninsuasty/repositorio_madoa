@@ -26,14 +26,12 @@
 		  <?php if ($this->session->role == 1): ?>
 
 			  <a href="<?php echo base_url()."admin/areas" ?>" class="list-group-item list-group-item-action bg-light">Áreas del conocimiento</a>
-			  <a href="#" class="list-group-item list-group-item-action bg-light">Componentes</a>
-			  <a href="#" class="list-group-item list-group-item-action bg-light">Competencias</a>
-			  <a href="#" class="list-group-item list-group-item-action bg-light">Usuarios</a>
-			  <a href="#" class="list-group-item list-group-item-action bg-light">OVA's</a>
-			  <a href="#" class="list-group-item list-group-item-action bg-light">Formatos</a>
-			  <a href="#" class="list-group-item list-group-item-action bg-light">Grados</a>
-			  <a href="#" class="list-group-item list-group-item-action bg-light">Idiomas</a>
-			  <a href="#" class="list-group-item list-group-item-action bg-light">Licencias</a>
+			  <a href="<?php echo base_url()."admin/componentes" ?>" class="list-group-item list-group-item-action bg-light">Componentes</a>
+			  <a href="<?php echo base_url()."admin/competencias" ?>" class="list-group-item list-group-item-action bg-light">Competencias</a>
+			  <a href="<?php echo base_url()."admin/formatos" ?>" class="list-group-item list-group-item-action bg-light">Formatos</a>
+			  <a href="<?php echo base_url()."admin/grados" ?>" class="list-group-item list-group-item-action bg-light">Grados</a>
+			  <a href="<?php echo base_url()."admin/idiomas" ?>" class="list-group-item list-group-item-action bg-light">Idiomas</a>
+			  <a href="<?php echo base_url()."admin/licencias" ?>" class="list-group-item list-group-item-action bg-light">Licencias</a>
 			  <a href="<?php echo base_url()."ova/cargar" ?>" class="list-group-item list-group-item-action bg-light">Cargar OVA</a>
 			  <a href="<?php echo base_url()."ova/cargar" ?>" class="list-group-item list-group-item-action bg-light">Actualizar OVA</a>
 

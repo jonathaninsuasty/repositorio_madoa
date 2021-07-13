@@ -13,4 +13,15 @@ class Users extends CI_Model {
         
     }
 
+    function obtenerUsuarios()
+    {
+        $result = $this->db->query("SELECT * FROM usuarios");
+        return $result->result_array();        
+    }
+
+    function actualizarEstado($idusuario, $state)
+    {
+        $this->db->query("UPDATE usuarios SET state=".$state." WHERE idusuarios=".$idusuario);
+    }
+
 }
